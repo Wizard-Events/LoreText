@@ -70,7 +70,7 @@ public final class LoreText extends JavaPlugin implements CommandExecutor, TabCo
         try {
             loreTextPermission = new Permission("loretext.apply", PermissionDefault.OP);
             getServer().getPluginManager().addPermission(loreTextPermission);
-        } catch (IllegalArgumentException ignored) {
+        } catch (IllegalArgumentException e) {
             logger.warn("Permission loretext.apply has already been registered by another plugin. This might cause problems.");
         }
 
