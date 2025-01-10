@@ -46,7 +46,7 @@ public final class LoreText extends JavaPlugin implements CommandExecutor, TabCo
 
         try {
             if (!getDataFolder().exists()) {
-                Files.createDirectories(getDataPath());
+                Files.createDirectories(getDataFolder().toPath());
                 saveResource("buff_ron.yaml", false);
             }
         } catch (Exception e) {
